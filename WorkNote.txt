@@ -1,0 +1,8 @@
+git clone --bare git@github.com:boonkuaeb/learnangular.git .git
+git config --bool core.bare false
+git reset --hard
+
+
+npm install
+
+git checkout 02_01b
