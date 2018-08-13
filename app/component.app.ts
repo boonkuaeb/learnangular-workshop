@@ -2,7 +2,14 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'app',
-    templateUrl: './partials/app.html'
+    templateUrl: './partials/app.html',
+    styles: [
+        ".btn { background-color: #00cc99; }",
+        ".btn:hover { background-color: #0f7595; }"
+    ],
+    styleUrls: [
+        './css/app.css'
+    ]
 })
 
 export class AppComponent {
