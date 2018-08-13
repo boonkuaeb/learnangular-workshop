@@ -9,8 +9,9 @@ export class AppComponent {
     name: string;
     artists: Object[];
 
-    onClick(e){
-        this.name  = e.target.innerHTML;
+    onClick(myItem, myElement){
+        this.name  = myItem.name;
+        myElement.style.backgroundColor = '#FECE4E';
     }
 
     addArtist(value){
@@ -24,7 +25,7 @@ export class AppComponent {
     }
 
     constructor() {
-        this.name = 'Boonkuae Boonsutta';
+        this.name = '';
         this.artists = [
             {
                 name: 'Tonnam',
