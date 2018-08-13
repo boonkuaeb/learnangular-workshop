@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import { ArtistItemComponent} from "./component.artist-item";
 
 export class Artist {
     name: string;
@@ -23,7 +22,12 @@ export class Artist {
 
 export class AppComponent {
     artists = ARISTST;
-    currentArtist = Artist;
+    currentArtist : Artist;
+
+
+    showArtist(item){
+        this.currentArtist = item;
+    }
 }
 
 

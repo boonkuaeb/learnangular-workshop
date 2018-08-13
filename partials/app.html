@@ -8,10 +8,14 @@
            placeholder="type in search team here"
     />
 </div>
-<ul class="artistlist cf">
+<!--card search-->
+
+<ul class="artistlist cf" *ngIf="query">
     <li class="artistlist-item cf"
+        (click)="showArtist(item);query='';"
         *ngFor="let item of artists">
         <artist-item class="content" [artist]="item"></artist-item>
     </li>
 </ul>
-<!--card search-->
+
+<artist-details *ngIf="currentArtist" [artist]="currentArtist" ></artist-details>
