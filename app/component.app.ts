@@ -25,7 +25,7 @@ export class AppComponent {
     }
 
     constructor() {
-        this.name = '';
+        this.name = 'Boonkuae Boonsutta';
         this.artists = [
             {
                 name: 'Tonnam',
