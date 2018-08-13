@@ -1,25 +1,23 @@
 <div class="card search">
     <h1 class="search-headline">Directory</h1>
-    <label for="newArtist" class="search-label">search
-        <span *ngIf="name" [innerHTML]="' for: ' + name"></span>
+    <label class="search-label">search
+        <span *ngIf="query" [innerHTML]="' for: ' + query"></span>
     </label>
     <input class="search-input"
-           #newArtist
-           [(ngModel)] = "name"
-           (keyup.enter) = "addArtist(newArtist.value); newArtist.value = '';"
-           id="newArtist" />
-    <button class="btn"
-    (click) = "addArtist(newArtist.value); newArtist.value = '';"
-    >Add
-    </button>
+           [(ngModel)]="query"
+           placeholder="type in search team here"
+    />
 </div>
 <ul class="artistlist cf">
-    <li class="artistlist-item"
-        #artistContainer
-        (click) = "onClick(item, artistContainer)"
+    <li class="artistlist-item cf"
         *ngFor="let item of artists">
-        <h2 class="artist-name">{{ item.name }}</h2>
-        <h3 class="artist-name">{{ item.school }}</h3>
+        <img src="images/{{ item.shortname }}_tn.jpg"
+             alt="{{ item.name }} photo"
+             class="artist-img">
+        <div class="artist-info">
+            <h2 class="artist-name">{{ item.name }}</h2>
+            <h3 class="artist-reknown">{{ item.reknown }}</h3>
+        </div>
     </li>
 </ul>
 <!--card search-->
